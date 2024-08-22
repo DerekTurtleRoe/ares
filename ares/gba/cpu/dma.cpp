@@ -12,8 +12,8 @@ auto CPU::DMA::transfer() -> void {
   u32 mode = size ? Word : Half;
   mode |= latch.length() == length() ? Nonsequential : Sequential;
 
-  if(mode & Nonsequential) {
-    cpu.idle();
+  if(!cpu.context.dmaRan) {
+    cpu.context.dmaRan = true;
     cpu.idle();
   }
 
@@ -23,8 +23,9 @@ auto CPU::DMA::transfer() -> void {
     n32 addr = latch.source();
     if(mode & Word) addr &= ~3;
     if(mode & Half) addr &= ~1;
-    cpu.dmabus.data = cpu.get(mode, addr);
-    if(mode & Half) cpu.dmabus.data |= cpu.dmabus.data << 16;
+    if(addr & 0x0800'0000) cpu.context.dmaRomAccess = true;
+    latch.data = cpu.get(mode, addr);
+    if(mode & Half) latch.data |= latch.data << 16;
   }
 
   if(mode & Nonsequential) {
@@ -41,7 +42,8 @@ auto CPU::DMA::transfer() -> void {
     n32 addr = latch.target();
     if(mode & Word) addr &= ~3;
     if(mode & Half) addr &= ~1;
-    cpu.set(mode, addr, cpu.dmabus.data);
+    if(addr & 0x0800'0000) cpu.context.dmaRomAccess = true;
+    cpu.set(mode, addr, latch.data >> (addr & 2) * 8);
   }
 
   switch(sourceMode) {

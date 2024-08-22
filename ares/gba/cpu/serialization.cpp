@@ -5,8 +5,6 @@ auto CPU::serialize(serializer& s) -> void {
   s(iwram);
   s(ewram);
 
-  s(dmabus.data);
-
   for(auto& dma : this->dma) {
     s(dma.id);
     s(dma.active);
@@ -31,6 +29,7 @@ auto CPU::serialize(serializer& s) -> void {
     s(dma.latch.target.mask);
     s(dma.latch.length.data);
     s(dma.latch.length.mask);
+    s(dma.latch.data);
   }
 
   for(auto& timer : this->timer) {
@@ -107,6 +106,8 @@ auto CPU::serialize(serializer& s) -> void {
   s(context.halted);
   s(context.stopped);
   s(context.booted);
+  s(context.dmaRan);
+  s(context.dmaRomAccess);
   s(context.dmaActive);
   s(context.prefetchActive);
   s(context.timerLatched);

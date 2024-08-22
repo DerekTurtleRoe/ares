@@ -55,6 +55,11 @@ auto CPU::dmaRun() -> void {
   if(!context.dmaActive && !context.prefetchActive) {
     context.dmaActive = true;
     while(dma[0].run() | dma[1].run() | dma[2].run() | dma[3].run());
+    if(context.dmaRan) {
+      idle();
+      context.dmaRan = false;
+      context.dmaRomAccess = false;
+    }
     context.dmaActive = false;
   }
 }
@@ -74,6 +79,10 @@ auto CPU::step(u32 clocks) -> void {
     timer[1].run();
     timer[2].run();
     timer[3].run();
+    timer[0].reloadLatch();
+    timer[1].reloadLatch();
+    timer[2].reloadLatch();
+    timer[3].reloadLatch();
     if(context.timerLatched) {
       timer[0].stepLatch();
       timer[1].stepLatch();
@@ -114,8 +123,6 @@ auto CPU::power() -> void {
   memory = {};
   prefetch = {};
   context = {};
-
-  dmabus = {};
 
   dma[0].source.setBits(27); dma[0].latch.source.setBits(27);
   dma[0].target.setBits(27); dma[0].latch.target.setBits(27);
