@@ -98,7 +98,7 @@ although other emulated consoles may work.
 If your computer meets the general speed requirements
 but games run too slowly,
 try choosing a different
-[audio driver](interface/higan-settings.md#advanced),
+[audio driver](interface/ares-settings.md#advanced),
 since that's usually what drives ares's timing.
 
 On some computers,
@@ -108,7 +108,7 @@ may be confused by ares's unusual pattern of CPU usage
 and the next few milliseconds of audio,
 then stops dead as it waits for output to complete).
 If holding down
-the [fast forward hotkey](interface/higan-settings.md#hotkeys)
+the [fast forward hotkey](interface/ares-settings.md#hotkeys)
 runs too fast but the game normally runs too slow,
 try disabling "power saver" mode
 or enabling "performance" mode.

@@ -25,7 +25,7 @@ Once ares's installed,
 start it up.
 Open the "Settings" menu,
 and choose "Input ..."
-to open [the Input settings](interface/higan-settings.md#input).
+to open [the Input settings](interface/ares-settings.md#input).
 
 ares supports a *lot* of different controllers
 for a lot of different consoles,
@@ -51,7 +51,7 @@ Load a game
 -----------
 
 From
-[the Systems menu](interface/higan.md#the-systems-menu),
+[the Systems menu](interface/ares.md#the-systems-menu),
 choose "Load ROM File ..."
 to open [a filesystem browser](interface/common.md#the-filesystem-browser),
 and choose the game you want to play.
@@ -78,7 +78,7 @@ if you're playing Super Mario World,
 that's a Super Famicom game
 so there will be a Super Famicom menu.
 
-Open [the console menu](interface/higan.md#the-console-menu),
+Open [the console menu](interface/ares.md#the-console-menu),
 and if there is a sub-menu for a controller port,
 make sure the port is using
 the controller you [set up previously](#configuring-inputs).

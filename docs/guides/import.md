@@ -1,5 +1,5 @@
 Before it can load a game,
-higan requires that all the game's data
+ares requires that all the game's data
 be stored correctly in the [Game Library].
 For [regular games](#regular-games)
 this is simple,
@@ -10,7 +10,7 @@ unusual hardware.
 Regular games
 -------------
 
-higan's importing tool, [icarus], can import games
+ares's importing tool, [icarus], can import games
 in the most commonly-used formats
 for each supported console,
 and also those same formats inside `.zip` files
@@ -50,9 +50,9 @@ or the Japanese and American variants.
 When choosing a game from the Game Library,
 a drop-down list in the bottom-right of the filesystem browser
 allows you to choose which regional variant
-of the console higan should emulate.
+of the console ares should emulate.
 For most consoles,
-higan can reliably guess which variant to use,
+ares can reliably guess which variant to use,
 and the list defaults to "Auto".
 
 Games with co-processor firmware
@@ -64,7 +64,7 @@ Sometimes,
 those extra chips were separate CPUs
 running their own separate firmware,
 and for those cases
-higan requires a copy of the co-processor firmware
+ares requires a copy of the co-processor firmware
 as well as the actual game data.
 Unfortunately,
 like games themselves,
@@ -228,7 +228,7 @@ here's the firmware files you'll need:
 </table>
 
 **Note 1:**
-The CX4 firmware is shipped with higan,
+The CX4 firmware is shipped with ares,
 because it just contains mathematical tables
 and not a copyrightable program.
 
@@ -263,9 +263,9 @@ If you try to import a game
 using the "Load ROM File ..." option in the [Systems menu]
 but it does not include the correct firmware data,
 nothing will happen,
-and higan will just sit there
+and ares will just sit there
 with "Unloaded" in
-[the status bar](../interface/higan.md#the-status-bar).
+[the status bar](../interface/ares.md#the-status-bar).
 
 Once a game with co-processor firmware is imported,
 you can play it just like any [regular game](#regular-games).
@@ -310,7 +310,7 @@ To import a memory pak,
 you should use [icarus].
 You can use the "Load ROM File ..." menu item
 in the [Systems menu],
-but higan cannot actually load a memory pak directly,
+but ares cannot actually load a memory pak directly,
 so once you choose a file to load
 it looks like nothing has happened.
 
@@ -322,7 +322,7 @@ but the name *inside* the `.zip` file
 must end in `.bs`)
 in order for it to be successfully imported.
 Sometimes memory pak filenames end in `.sfc`,
-which will make higan try to import them as
+which will make ares try to import them as
 regular Super Famicom games
 and fail.
 Rename the file and it should work beautifully.
@@ -330,13 +330,13 @@ Rename the file and it should work beautifully.
 Playing a game that has a slot for a memory pak
 is just like playing a regular game,
 but after you have selected which game you want to play
-higan will open another [filesystem browser]
+ares will open another [filesystem browser]
 to let you pick which previously-imported memory pak
 you want to insert into the game.
 If you press "Cancel" at this point,
 the game will load without any cartridge in its memory pak slot.
 
-If you load the control cartridge into higan,
+If you load the control cartridge into ares,
 make sure the emulated Satellaview
 is connected to the emulated Super Famicom's expansion port
 by opening the "Super Famicom" menu,
@@ -348,13 +348,13 @@ power-cycle the Super Famicom
 (also in the "Super Famicom" menu)
 to make sure the control cartridge will find the Satellaview
 when it starts up.
-Note that higan's Satellaview emulation is not very accurate,
+Note that ares's Satellaview emulation is not very accurate,
 so the control cartridge may not work as it should.
 
 Playing a memory pak on its own doesn't make much sense,
 it's not a standalone cartridge.
 Play a game with a memory pak slot,
-and choose which memory pak you want when higan asks for it.
+and choose which memory pak you want when ares asks for it.
 
 For more information about the Satellaview service,
 a translation patch for the control cartridge
@@ -381,7 +381,7 @@ To import a mini-cartridge,
 you should use [icarus].
 You can use the "Load ROM File ..." menu item
 in the [Systems menu],
-but higan cannot actually load a mini-cartridge directly,
+but ares cannot actually load a mini-cartridge directly,
 so once you choose a file to load
 it looks like nothing has happened.
 
@@ -393,14 +393,14 @@ but the name *inside* the `.zip` file
 must end in `.st`)
 in order for it to be successfully imported.
 Sometimes mini-cartridge filenames end in `.sfc`,
-which will make higan try to import them as
+which will make ares try to import them as
 regular Super Famicom games,
 and fail miserably.
 Rename the file and it should work beautifully.
 
 To play a Sufami Turbo game,
 load the Sufami Turbo cartridge like any other game.
-higan will open another [filesystem browser]
+ares will open another [filesystem browser]
 to let you pick which previously-imported mini-cartridge
 you want to insert into slot A.
 If you press "Cancel" at this point,
@@ -410,7 +410,7 @@ to turn off your Super Famicom,
 insert a game into slot A,
 and try again.
 If you chose a cartridge for slot A,
-higan will open yet another
+ares will open yet another
 filesystem browser
 to let you choose a mini-cartridge for slot B.
 If you press "Cancel" at this point,
@@ -419,7 +419,7 @@ the Sufami Turbo cartridge will boot without anything in slot B.
 If you play Sufami Turbo games regularly,
 you may want to add the Sufami Turbo base cartridge
 to the [Systems menu]
-so you don't have to tell higan where it is every time.
+so you don't have to tell ares where it is every time.
 
 [Sufami Turbo]: https://en.wikipedia.org/wiki/Sufami_Turbo
 
@@ -441,7 +441,7 @@ games play 2.4% faster than on a real Game Boy.
 The Super Game Boy 2 was a Japan-only release
 that fixed the timing problem of the original Super Game Boy,
 and included a different set of default borders.
-higan emulates the Super Game Boy 2 completely,
+ares emulates the Super Game Boy 2 completely,
 including the timing change.
 
 Because the Super Game Boy cartridge includes
@@ -482,16 +482,16 @@ here are their details:
 
 To play a Game Boy game in Super Game Boy mode,
 load the Super Game Boy cartridge like any other game.
-higan will open another [filesystem browser]
+ares will open another [filesystem browser]
 to let you pick which previously-imported Game Boy game
 you want to insert into the Super Game Boy.
 If you press "Cancel" at this point,
-higan will crash, so don't do that.
+ares will crash, so don't do that.
 
 If you regularly play Game Boy games
 through the Super Game Boy,
 you may want to add it to the [Systems menu]
-so you don't have to tell higan where it is every time.
+so you don't have to tell ares where it is every time.
 
 **Note:**
 Only games for the original, black-and-white Game Boy
@@ -507,8 +507,8 @@ for details.
 MSU1 games
 ----------
 
-The MSU1 is a fictional expansion chip
-invented by higan's author byuu,
+The MSU1 is a homebrew expansion chip
+invented by ares's author byuu,
 designed to allow the Super Famicom
 to stream data and audio.
 Although the MSU1 is not specific
@@ -519,7 +519,7 @@ like the Mega Drive's Mega CD
 and the PC Engine's CD-ROM²,
 such as CD-quality music and full-motion video.
 
-Although the MSU1 was invented for higan,
+Although the MSU1 was invented for ares,
 it is now supported by other Super Famicom emulators too.
 The [SD2SNES] programmable cartridge
 even allows you to play MSU1 games on a real console.
@@ -602,7 +602,7 @@ To import an MSU1 game:
         etc.
       - If there's no files with those names,
         there should be other numbered `.pcm` files
-        that you can rename to match what higan expects.
+        that you can rename to match what ares expects.
       - If the `.pcm` files have no numbers in the filenames,
         there maybe a `.bml` or `.xml` file that lists
         which number goes with which file.
@@ -635,8 +635,8 @@ a file containing a list of modifications to make,
 that can be automatically applied by a "patcher" tool
 like [Flips].
 
-higan does not support soft-patching,
-so if you want to play a patched game in higan,
+ares does not support soft-patching,
+so if you want to play a patched game in ares,
 you will need to use a patcher to apply it yourself,
 creating a new, patched copy of the game.
 
@@ -654,7 +654,7 @@ Unlike game-specific firmware,
 the GBA BIOS was part of the console,
 not the cartridge,
 so it must be installed
-[into higan](../install/general.md).
+[into ares](../install/general.md).
 
 Once the GBA BIOS is installed,
 GBA games can be imported and played just like
@@ -669,7 +669,7 @@ PowerFest '94
 
 [PowerFest '94](https://en.wikipedia.org/wiki/Nintendo_PowerFest_%2794)
 was a video game competition
-organised by Nintendo,
+organized by Nintendo,
 in which contestants had six minutes
 to complete a challenge based on three Super Famicom games.
 The PowerFest '94 cartridge
@@ -680,17 +680,17 @@ switch between them after a specific time,
 extract a score,
 and display the combined total at the end.
 
-Previous versions of higan
+Previous versions of ares
 could emulate the PowerFest '94 cartridge,
-but changes to higan's manifest system in v107
+but changes to ares's manifest system in v107
 prevent PowerFest '94 from working in that version.
 Support will likely be re-added in a future version,
-but in the mean time you can use higan v106
+but in the mean time you can use ares v106
 and follow [that version's import instructions][pf94v106].
 
-[pf94v106]: https://higan.readthedocs.io/en/v106/guides/import/#powerfest-94
+[pf94v106]: https://ares.readthedocs.io/en/v106/guides/import/#powerfest-94
 
 [filesystem browser]: ../interface/common.md#the-filesystem-browser
 [Game Library]: ../concepts/game-library.md
 [icarus]: ../interface/icarus.md
-[Systems menu]: ../interface/higan.md#the-systems-menu
+[Systems menu]: ../interface/ares.md#the-systems-menu

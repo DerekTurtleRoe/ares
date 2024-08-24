@@ -8,25 +8,25 @@ there are many standards,
 and different ones work better
 on different computers.
 Therefore,
-higan comes with "drivers"
+ares comes with "drivers"
 for video, audio and input,
 so you can find the one that works best for your computer.
 To see what drivers you're currently using,
 or to choose different ones,
 go to the [Advanced tab] of the Settings window.
 
-[Advanced tab]: ../interface/higan-settings.md#advanced
+[Advanced tab]: ../interface/ares-settings.md#advanced
 
 Here are the most notable drivers
 for each platform
 in each category.
-If your copy of higan
+If your copy of ares
 includes a driver not listed here,
 it's probably a reasonable choice,
 so try it out and see how you like it.
 
 **Note:** After changing any driver,
-you must restart higan for the change to take effect.
+you must restart ares for the change to take effect.
 
 **Note:**
 Video, Audio and Input
@@ -51,7 +51,7 @@ On Windows:
   - **Direct3D** is a good choice
     if OpenGL is unavailable.
     It also allows
-    [Exclusive fullscreen](../interface/higan-settings.md#video),
+    [Exclusive fullscreen](../interface/ares-settings.md#video),
     bypassing Windows' desktop compositor.
   - **GDI** is the safest choice,
     but performs very poorly at large sizes.
@@ -83,7 +83,7 @@ On Windows:
   - **WASAPI** offers low latency,
     but is only slightly more likely to work than ASIO.
     It also offers
-    [Exclusive Mode](../interface/higan-settings.md#audio),
+    [Exclusive Mode](../interface/ares-settings.md#audio),
     which can improve audio quality and lower latency,
     but may be better or worse than shared mode
     in practice.
@@ -122,7 +122,7 @@ On Linux:
 
 **Note:**
 By default,
-higan uses the audio driver to regulate its emulation speed.
+ares uses the audio driver to regulate its emulation speed.
 If games run too fast on your computer,
 see [Games run too fast](../faq.md#games-run-too-fast) in the FAQ.
 

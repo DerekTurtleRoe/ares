@@ -1,7 +1,7 @@
 The Tools window
 appears when you choose
 one of the items at the bottom of
-[the Tools menu](higan.md#the-tools-menu).
+[the Tools menu](ares.md#the-tools-menu).
 
 The window has a tab for each tool.
 
@@ -9,12 +9,12 @@ Cheat Editor
 ============
 
 For some consoles,
-higan supports applying temporary changes to the code of a running game.
+ares supports applying temporary changes to the code of a running game.
 For example,
 you could disable the code that detects when the player takes damage,
 resulting in an "invulnerability" mode.
 Currently,
-higan supports cheats for the following consoles:
+ares supports cheats for the following consoles:
 
   - Famicom
   - Super Famicom
@@ -28,7 +28,7 @@ select an unused row in the list,
 then type the relevant codes in the "Code(s)" field at the bottom,
 and a description in the "Description" field.
 See [Cheat code formats](#cheat-code-formats)
-for a description of the codes higan understands.
+for a description of the codes ares understands.
 
 To enable or disable an existing cheat,
 tick the checkbox in the first column of the list.
@@ -45,12 +45,12 @@ click the "Reset" button in the bottom right.
 
 Changes made in the Cheat Editor are saved to disk
 when the game is unloaded,
-or when higan exits.
-higan stores the known cheats for a particular game
-in `higan/cheats.bml`
+or when ares exits.
+ares stores the known cheats for a particular game
+in `ares/cheats.bml`
 inside the game's [game folder](../concepts/game-folders.md).
 
-If your copy of higan includes a cheat database
+If your copy of ares includes a cheat database
 (a file named `cheats.bml`
 in the same folder as `Super Famicom.sys`
 and the other `*.sys` folders),
@@ -76,12 +76,12 @@ for the console in question
 6 for 16-bit CPUs,
 and 8 for 32-bit CPUs).
 
-For compatibility with older versions of higan,
+For compatibility with older versions of ares,
 the older syntaxes of `addr/data` and `addr/comp/data`
 are still supported.
 
 For cheats that require more than a single-byte change,
-higan allows multiple codes to be combined with `+`
+ares allows multiple codes to be combined with `+`
 so that all of them can have a single description
 and be toggled with a single click.
 For example,
@@ -130,11 +130,11 @@ Manifest Viewer
 
 As described in
 [Game Manifests](../concepts/manifests.md),
-higan uses a "manifest" to
+ares uses a "manifest" to
 describe how the various parts of a game cartridge
 are wired up together.
 The Manifest Viewer lets you examine
-the configuration higan is using for the loaded game.
+the configuration ares is using for the loaded game.
 
 Game Notes
 ==========
