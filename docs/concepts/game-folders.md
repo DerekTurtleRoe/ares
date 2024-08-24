@@ -4,7 +4,7 @@ the information and resources required
 to properly emulate a particular game.
 For example,
 to represent a Super Famicom game named `dkc3`,
-higan would create a game folder named `dkc3.sfc`,
+ares would create a game folder named `dkc3.sfc`,
 and inside it store the game data as `program.rom`
 and the save data as `save.ram`:
 
@@ -76,7 +76,7 @@ by putting it in a sub-folder.
 For a more detailed motivation for game folders,
 see [Game Paks on the ares website][gp].
 
-[gp]: https://byuu.org/emulation/higan/game-paks
+[gp]: https://byuu.org/emulation/ares/game-paks
 
 What's in a game folder?
 ------------------------
@@ -142,7 +142,7 @@ are placed in a `ares` sub-folder:
 
   - `cheats.bml`:
     All information present in
-    the [Cheat Editor](../interface/higan-tools.md#cheat-editor)
+    the [Cheat Editor](../interface/ares-tools.md#cheat-editor)
     is stored here.
   - `notes.txt`:
     Everything entered in the [Game Notes] is stored here.
@@ -151,4 +151,4 @@ are placed in a `ares` sub-folder:
   - `states/managed/slot-*.bst`:
     All [Manager States](save-states.md#manager-states) are stored here.
 
-[Game Notes]: ../interface/higan-tools.md#game-notes
+[Game Notes]: ../interface/ares-tools.md#game-notes

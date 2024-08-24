@@ -5,7 +5,7 @@ When [icarus](../interface/icarus.md) imports a game,
 it creates or updates
 the corresponding game folder in the game library.
 When you use the items in
-[ares's Systems menu](../interface/higan.md#the-systems-menu),
+[ares's Systems menu](../interface/ares.md#the-systems-menu),
 ares shows you the games for that console
 that are already in the library.
 
@@ -83,5 +83,5 @@ and telling ares where to find them.
 
 [icsettings]: ../interface/icarus.md#the-icarus-settings-dialog
 [fsbrowser]: ../interface/common.md#the-filesystem-browser
-[settingsmenu]: ../interface/higan.md#the-settings-menu
-[advsettings]: ../interface/higan-settings.md#advanced
+[settingsmenu]: ../interface/ares.md#the-settings-menu
+[advsettings]: ../interface/ares-settings.md#advanced

@@ -103,9 +103,9 @@ Quick states
 
 ares has five Quick State slots,
 which can be used from
-[the Tools menu](../interface/higan.md#the-tools-menu),
+[the Tools menu](../interface/ares.md#the-tools-menu),
 or with the appropriate
-[hotkeys](../interface/higan-settings.md#hotkeys).
+[hotkeys](../interface/ares-settings.md#hotkeys).
 
 Quick states are useful
 as extra checkpoints
@@ -119,7 +119,7 @@ Manager states
 --------------
 
 ares's
-[State Manager](../interface/higan-tools.md#state-manager)
+[State Manager](../interface/ares-tools.md#state-manager)
 allows you to create over a hundred save states,
 and add a helpful description to each one.
 

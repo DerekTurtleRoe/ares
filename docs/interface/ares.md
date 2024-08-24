@@ -1,4 +1,4 @@
-When you launch higan
+When you launch ares
 the main window appears,
 with a menu-bar across the top,
 a status-bar across the bottom,
@@ -8,14 +8,14 @@ the running game's video output.
 The Systems menu
 ----------------
 
-This menu lists the systems higan emulates.
+This menu lists the systems ares emulates.
 Choosing any system from this menu allows you to play
 games for that system that you've already imported
-into higan's [game library](../concepts/game-library.md).
+into ares's [game library](../concepts/game-library.md).
 See [Importing and playing games](../guides/import.md).
 
 You can customise this menu
-in [higan's Systems settings](higan-settings.md#systems)
+in [ares's Systems settings](ares-settings.md#systems)
 to hide systems you don't care about,
 or add a specific cartridge for any supported system.
 This makes it more convenient
@@ -54,7 +54,7 @@ allows you
 to connect different emulated controllers
 to the first controller port,
 if there is one.
-See [higan's Input settings](higan-settings.md#input)
+See [ares's Input settings](ares-settings.md#input)
 for information about configuring
 which PC controller inputs are used
 for the emulated controllers.
@@ -69,7 +69,7 @@ allows you
 to connect different emulated controllers
 to the second controller port,
 if there is one.
-See [higan's Input settings](higan-settings.md#input)
+See [ares's Input settings](ares-settings.md#input)
 for information about configuring
 which PC controller inputs are used
 for the emulated controllers.
@@ -129,7 +129,7 @@ to the "Reset" function
 on the "Controls" controller
 in the "Hardware" port
 of the Sega Master System
-in [higan's Input settings](higan-settings.md#input).
+in [ares's Input settings](ares-settings.md#input).
 
 **Power Cycle**
 restarts the loaded game
@@ -152,7 +152,7 @@ that aren't specific to any particular console.
 **Size**
 determines the size
 of the emulated console's video output
-when higan is running in windowed mode
+when ares is running in windowed mode
 (as opposed to fullscreen).
 The menu-items that indicate particular sizes
 are only approximate, since
@@ -161,29 +161,29 @@ different consoles have different native image sizes,
 and some consoles can change the size of their output image dynamically.
 
   - **1x (240p)**
-    resizes the higan window
+    resizes the ares window
     so that each pixel of the emulated console's video output
     is drawn as a single pixel on the computer screen.
   - **2x (480p)**
-    resizes the higan window
+    resizes the ares window
     so that each pixel of the emulated console's video output
     is drawn as a 2×2 block of pixels on the computer screen.
   - **3x (720p)**
-    resizes the higan window
+    resizes the ares window
     so that each pixel of the emulated console's video output
     is drawn as a 3×3 block of pixels on the computer screen.
   - **Shrink Window To Size**
-    resizes the higan window to fit the emulated console's video output
+    resizes the ares window to fit the emulated console's video output
     at its current scale,
     so there's no black padding between the image and the window border
     (some padding may remain
     if "Show Overscan Area" is enabled
     in the Output menu).
   - **Center Window**
-    moves the higan window to the centre of the computer screen.
+    moves the ares window to the centre of the computer screen.
 
 **Output**
-controls how higan draws the emulated console's video output
+controls how ares draws the emulated console's video output
 into the space available,
 in both windowed and fullscreen modes.
 
@@ -207,7 +207,7 @@ in both windowed and fullscreen modes.
     This completely eliminates black borders,
     but can look very weird.
   - **Adaptive Sizing**
-    allows higan to resize its window
+    allows ares to resize its window
     when the emulated console changes the resolution
     of its video output.
     This can avoid black borders,
@@ -221,7 +221,7 @@ in both windowed and fullscreen modes.
   - **Show Overscan Area**
     controls whether the area defined by
     the "Overscan Area" sliders in
-    the [Video settings](higan-settings.md#video)
+    the [Video settings](ares-settings.md#video)
     is clipped from the emulated video output
     or shown.
 
@@ -258,7 +258,7 @@ is scaled up to suit modern high-resolution displays.
 describes all the options in this sub-menu.
 
 **Synchronize Audio**
-causes higan to wait for audio playback to complete
+causes ares to wait for audio playback to complete
 before resuming emulation.
 This should reduce popping and glitching noises,
 and slows the emulation down to approximately the correct speed.
@@ -267,32 +267,32 @@ If your PC cannot emulate at full-speed,
 this has no noticeable effect.
 
 **Mute Audio**
-causes higan to not output sound from the emulated console.
+causes ares to not output sound from the emulated console.
 The sound hardware is still emulated.
 
 **Show Status Bar**
-causes higan to show or hide the status bar
+causes ares to show or hide the status bar
 at the bottom of the window.
 This option has no effect in fullscreen mode.
 See [The status bar](#the-status-bar) for more information.
 
 **Systems ...**
-opens [higan's Systems settings](higan-settings.md#systems).
+opens [ares's Systems settings](ares-settings.md#systems).
 
 **Video ...**
-opens [higan's Video settings](higan-settings.md#video).
+opens [ares's Video settings](ares-settings.md#video).
 
 **Audio ...**
-opens [higan's Audio settings](higan-settings.md#audio).
+opens [ares's Audio settings](ares-settings.md#audio).
 
 **Input ...**
-opens [higan's Input settings](higan-settings.md#input).
+opens [ares's Input settings](ares-settings.md#input).
 
 **Hotkeys ...**
-opens [higan's Hotkeys settings](higan-settings.md#hotkeys).
+opens [ares's Hotkeys settings](ares-settings.md#hotkeys).
 
 **Advanced ...**
-opens [higan's Advanced settings](higan-settings.md#advanced).
+opens [ares's Advanced settings](ares-settings.md#advanced).
 
 [svsa]: #why-do-synchronize-video-and-synchronize-audio-conflict
 
@@ -316,47 +316,47 @@ See [Save States](../concepts/save-states.md) for more information.
 pauses the emulated console
 until this menu-item is selected again.
 This can also be triggered by
-the [pause hotkey](higan-settings.md#hotkeys).
+the [pause hotkey](ares-settings.md#hotkeys).
 
 **Cheat Editor ...**
-opens the [Cheat Editor tab](higan-tools.md#cheat-editor)
+opens the [Cheat Editor tab](ares-tools.md#cheat-editor)
 of the Tools window.
 
 **State Manager ...**
-opens the [State Manager tab](higan-tools.md#state-manager)
+opens the [State Manager tab](ares-tools.md#state-manager)
 of the Tools window.
 
 **Manifest Viewer ...**
-opens the [Manifest Viewer tab](higan-tools.md#manifest-viewer)
+opens the [Manifest Viewer tab](ares-tools.md#manifest-viewer)
 of the Tools window.
 
 **Game Notes ...**
-opens [the Game Notes tab](higan-tools.md#game-notes)
+opens [the Game Notes tab](ares-tools.md#game-notes)
 of the Tools window.
 
 The Help menu
 -------------
 
-The Help menu contains information about higan itself.
+The Help menu contains information about ares itself.
 
 **Documentation**
-loads the official higan documentation
+loads the official ares documentation
 in your web-browser.
 
 **Credits**
-loads a list of people who have contributed to higan
+loads a list of people who have contributed to ares
 in your web-browser.
 
 **About**
 opens the About dialog,
-which displays basic information about higan,
+which displays basic information about ares,
 including the version number.
 
 The status bar
 --------------
 
 The status bar appears
-at the bottom of the main higan window,
+at the bottom of the main ares window,
 while "Show Status Bar" is ticked in [the Settings menu](#the-settings-menu).
 
 Before any game is loaded,
@@ -374,16 +374,16 @@ you may need a faster computer,
 or a faster [video driver](../guides/drivers.md#video).
 If the number is too high,
 you may need to [Synchronize Audio](#the-settings-menu),
-or you may have pressed the "turbo" [hotkey](higan-settings.md#hotkeys).
+or you may have pressed the "turbo" [hotkey](ares-settings.md#hotkeys).
 
 The status bar displays "Paused"
-if you have pressed the "pause" [hotkey](higan-settings.md#hotkeys),
+if you have pressed the "pause" [hotkey](ares-settings.md#hotkeys),
 selected "Pause Emulation" from [the Tools menu](#the-tools-menu),
 or if "When focus is lost: Pause Emulation" is ticked
-in [higan's Input settings](higan-settings.md#input)
-and the main higan window is not the foreground window.
+in [ares's Input settings](ares-settings.md#input)
+and the main ares window is not the foreground window.
 To resume emulation,
-make sure the main higan window is in the foreground,
+make sure the main ares window is in the foreground,
 select "Pause Emulation" from the Tools menu again,
 and/or press the "pause" hotkey.
 

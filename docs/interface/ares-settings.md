@@ -1,7 +1,7 @@
 The Settings window
 appears when you choose
 one of the items at the bottom of
-[the Settings menu](higan.md#the-settings-menu),
+[the Settings menu](ares.md#the-settings-menu),
 and contains less-frequently-modified settings.
 Most of these can be safely ignored,
 or set once and never changed again.
@@ -12,7 +12,7 @@ Systems
 =======
 
 This tab configures the contents of
-[the Systems menu](higan.md#the-systems-menu),
+[the Systems menu](ares.md#the-systems-menu),
 so you can make it easier to load the games you care about
 and hide things that get in the way.
 
@@ -20,7 +20,7 @@ Each item in the list represents
 a single item in the Systems menu.
 If the box at the left is ticked,
 that item will be included in the menu,
-otherwise it will be hidden—but higan will remember its configuration
+otherwise it will be hidden—but ares will remember its configuration
 in case you want to show it again.
 
 At the bottom left are
@@ -53,7 +53,7 @@ System Properties
 This dialog appears when clicking "Append" or "Modify"
 in the [Systems](#systems) tab.
 It allows you to configure a new ("Append") or existing ("Modify") entry
-in the [Systems menu](higan.md#the-systems-menu).
+in the [Systems menu](ares.md#the-systems-menu).
 
   - **System** controls which console will be emulated
     when this menu-item is chosen.
@@ -61,15 +61,15 @@ in the [Systems menu](higan.md#the-systems-menu).
     into the emulated console
     when this menu-item is chosen.
       - If left blank,
-        higan will open [a filesystem browser](common.md#the-filesystem-browser)
+        ares will open [a filesystem browser](common.md#the-filesystem-browser)
         allowing you to pick a previously-imported game from
         the [game library](../concepts/game-library.md).
       - If you choose a particular game,
-        higan will immediately load it
+        ares will immediately load it
         when the menu-item is chosen.
         If the game requires additional data
         (for example, the Super Game Boy requires a Game Boy cartridge)
-        higan will prompt for it.
+        ares will prompt for it.
   - **Alias** controls the name of this item,
     as displayed in the Systems menu.
   - **Append** (present in "Append" mode) closes the dialog
@@ -84,7 +84,7 @@ Video
 =====
 
 This tab contains options that affect
-how higan displays
+how ares displays
 the emulated console's video output.
 
 **Color Adjustment**
@@ -103,7 +103,7 @@ of the emulated console's video output:
     any adjustment applied by
     the "Colors" option
     in the "Emulation" sub-menu
-    of the [Settings menu](higan.md#the-settings-menu).
+    of the [Settings menu](ares.md#the-settings-menu).
   - **Luminance** adjusts the overall brightness,
     where 100% is normal,
     and 0% is totally black.
@@ -112,7 +112,7 @@ of the emulated console's video output:
 controls what parts of the video output are hidden
 when "Show Overscan Area" is disabled
 in the "Output" sub-menu of
-the [Settings menu](higan.md#the-settings-menu).
+the [Settings menu](ares.md#the-settings-menu).
 On a standard-definition television,
 the outermost edges of the emulated console's video output
 would have been hidden by the bezel,
@@ -135,16 +135,16 @@ mode.
 
 **Fullscreen**
 settings apply
-when higan is running fullscreen,
+when ares is running fullscreen,
 because it was started with the `--fullscreen`
-[command-line option](higan-cli.md)
+[command-line option](ares-cli.md)
 or because the user pressed
-the Toggle Fullscreen [hotkey](higan-settings.md#hotkeys).
+the Toggle Fullscreen [hotkey](ares-settings.md#hotkeys).
 
   - **Exclusive Mode**
     requests exclusive access
     to the computer's video output
-    when higan enters fullscreen mode.
+    when ares enters fullscreen mode.
     This prevents other applications
     or the operating system itself
     from drawing anything,
@@ -158,7 +158,7 @@ Audio
 =====
 
 This tab contains options that affect
-how higan reproduces
+how ares reproduces
 the emulated console's audio output.
 
 **Driver**
@@ -166,24 +166,24 @@ settings affect
 the current [Audio driver](../guides/drivers.md).
 
   - **Device** allows you to choose
-    which audio device higan sends
+    which audio device ares sends
     the emulated game's audio to,
     if you have more than one.
-  - **Frequency** controls the sample-rate that higan will use
+  - **Frequency** controls the sample-rate that ares will use
     when generating audio.
     If your PC's audio hardware has a "native" sample-rate
     and you know what it is,
     pick that.
     Otherwise,
     44.1kHz or 48kHz should be fine.
-  - **Latency** controls how much audio output higan calculates in advance.
+  - **Latency** controls how much audio output ares calculates in advance.
     Higher values reduce the chance of
     "popping" or "glitching" noises,
     but increase the delay between an action occurring on-screen
     and the corresponding sound-effect being played.
   - **Exclusive Mode** appears
     if the current audio driver
-    allows higan to take exclusive control of your PC's audio output,
+    allows ares to take exclusive control of your PC's audio output,
     so no other applications can play sounds.
     This can improve audio quality,
     and lower the effective audio latency.
@@ -206,21 +206,21 @@ Input
 =====
 
 This tab controls
-how higan handles input for the emulated consoles.
+how ares handles input for the emulated consoles.
 
 **When focus is lost**
 controls what happens when a game is loaded,
-but higan is not the current foreground window.
+but ares is not the current foreground window.
 
   - **Pause Emulation** automatically pauses emulation.
   - **Block Input** allows emulation to keep running,
-    but higan will ignore all configured button presses.
+    but ares will ignore all configured button presses.
     If you're using the keyboard to emulate a controller,
     this prevents typing in other applications
-    from messing with higan,
+    from messing with ares,
     but music will keep playing.
   - **Allow Input** allows emulation to continue as normal.
-    This allows somebody to play higan with a controller
+    This allows somebody to play ares with a controller
     in one window,
     while somebody else types into another application
     in another window.
@@ -299,7 +299,7 @@ buttons in the bottom-left of the window.
 
 **Note:**
 To use an controller axis mapped to a mouse axis,
-higan will need to be in fullscreen mode,
+ares will need to be in fullscreen mode,
 or you'll need to press
 the key mapped to "Toggle Mouse Capture"
 on the [Hotkeys tab](#hotkeys).
@@ -337,25 +337,25 @@ for details.
 
 **Note:**
 Once you've configured which computer inputs
-higan should route to which controllers,
+ares should route to which controllers,
 make sure the controller in question
 is actually connected to the correct controller port
-in [the console menu](higan.md#the-console-menu).
+in [the console menu](ares.md#the-console-menu).
 
 Hotkeys
 =======
 
 This tab is like "Inputs" above,
-except it contains controls for higan itself
+except it contains controls for ares itself
 instead of for the emulated console.
 
-  - **Toggle Fullscreen** puts higan into fullscreen mode,
+  - **Toggle Fullscreen** puts ares into fullscreen mode,
     where the menu and status bar are hidden,
     and the emulated console's video output
     can cover the entire screen.
     Toggling fullscreen also automatically captures the mouse.
   - **Toggle Mouse Capture** hides the usual mouse-cursor,
-    and captures the mouse so it cannot leave the higan window.
+    and captures the mouse so it cannot leave the ares window.
     This is useful when the mouse is being used to emulate
     a light-gun controller like the Super Scope.
   - **Save Quick State** saves the current state of the emulated console
@@ -369,7 +369,7 @@ instead of for the emulated console.
   - **Pause Emulation** pauses the emulated console
     until the Pause Emulation hotkey is pressed a second time,
     or "Pause Emulation" is chosen from
-    [the Tools menu](higan.md#the-tools-menu)..
+    [the Tools menu](ares.md#the-tools-menu)..
   - **Fast Forward** disables audio and video synchronisation
     for as long as it's held down,
     so emulation proceeds as quickly as possible.
@@ -379,14 +379,14 @@ instead of for the emulated console.
   - **Soft Reset** restarts the emulated console's CPU
     while leaving the console's memory untouched,
     just like the "Soft Reset" menu item
-    in [the console menu](higan.md#the-console-menu).
+    in [the console menu](ares.md#the-console-menu).
     This hotkey does nothing
     when the "Soft Reset" item
     does not appear in the console menu.
   - **Power Cycle** turns the emulated console off and back on
     (a "hard reset"),
     just like the "Power Cycle" menu item
-    in [the console menu](higan.md#the-console-menu).
+    in [the console menu](ares.md#the-console-menu).
   - **Rotate Display** will rotate the display
     of the Game Boy Advance
     and WonderSwan (Color).
@@ -403,20 +403,20 @@ This tab contains all the settings
 that didn't fit into one of the other categories.
 
 **Driver Selection**
-tells higan how to
+tells ares how to
 accept input,
 display video,
 and play sound
 on this computer.
 
-  - **Video** controls how higan will draw
+  - **Video** controls how ares will draw
     the emulated console's video output
     to the PC screen.
     "None" means no video will be drawn.
-  - **Audio** controls how higan will present
+  - **Audio** controls how ares will present
     the emulated console's audio output.
     "None" means no audio will be played.
-  - **Input** controls how higan checks for input
+  - **Input** controls how ares checks for input
     from the PC's input devices.
     "None" means the emulated console cannot be controlled.
 
@@ -424,13 +424,13 @@ See [Choosing drivers](../guides/drivers.md)
 for help choosing which drivers you should use.
 
 **Game Library**
-configures how higan interacts
+configures how ares interacts
 with the [Game Library](../concepts/game-library.md).
 
-  - **Location** tells higan where to look for games to load.
+  - **Location** tells ares where to look for games to load.
     See [Moving the Game Library](../concepts/game-library.md#moving-the-game-library)
     for more information.
-  - **Ignore Manifests** makes higan ignore
+  - **Ignore Manifests** makes ares ignore
     the [manifest](../concepts/manifests.md) file
     in the loaded game's
     [game folder](../concepts/game-folders.md)
@@ -441,13 +441,13 @@ with the [Game Library](../concepts/game-library.md).
 
 **Other**
 
-  - **Auto-Save Memory Periodically** makes higan write
+  - **Auto-Save Memory Periodically** makes ares write
     [in-game saves](../concepts/save-states.md#save-states-versus-in-game-saves)
     to disk during gameplay,
-    instead of only when higan exits.
+    instead of only when ares exits.
     This may cause stuttering,
     but means that you haven't lost everything
-    if higan crashes,
+    if ares crashes,
     or your computer loses power.
       - Note that this does not include
-        [game notes](higan-tools.md#game-notes)
+        [game notes](ares-tools.md#game-notes)

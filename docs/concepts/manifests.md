@@ -8,8 +8,8 @@ and to the console itself.
 
 If you load a game into ares,
 you can look at the game's manifest
-by opening [the Tools menu](../interface/higan.md#the-tools-menu)
-and choosing [Manifest Viewer](../interface/higan-tools.md#manifest-viewer).
+by opening [the Tools menu](../interface/ares.md#the-tools-menu)
+and choosing [Manifest Viewer](../interface/ares-tools.md#manifest-viewer).
 
 Why manifests?
 --------------
@@ -105,7 +105,7 @@ or have dumped a previously-unknown cartridge,
 and want to write a manifest yourself,
 you should read the [official manifest specification][manifest].
 
-[manifest]: https://doc.byuu.org/higan/manifests/
+[manifest]: https://doc.byuu.org/ares/manifests/
 
 Ignoring manifests
 ------------------
@@ -122,7 +122,7 @@ would break when played in emulators that supported the new format.
 Therefore,
 icarus [defaults](../interface/icarus.md#the-icarus-settings-dialog)
 to not writing out manifests when it imports games,
-and ares [defaults](../interface/higan-settings.md#advanced)
+and ares [defaults](../interface/ares-settings.md#advanced)
 to ignoring manifests that are present.
 Instead,
 when ares loads a game,

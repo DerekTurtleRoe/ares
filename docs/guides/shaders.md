@@ -1,8 +1,8 @@
-Most of the consoles higan emulates
+Most of the consoles ares emulates
 were designed for low resolution NTSC televisions,
 and their video output is chunky and blocky
 by today's standards.
-Video shaders customise how the emulated console's video output
+Video shaders customize how the emulated console's video output
 is drawn to the computer screen,
 and can clean up and smooth out the original video,
 reproduce the scanlines and blurring of the original display,
@@ -11,22 +11,22 @@ or any other visual effect.
 The available video shaders are listed in
 the "Shader" sub-menu of the [Settings menu].
 Which shaders are available depends on
-the [video driver] higan is configured to use.
+the [video driver] ares is configured to use.
 Most drivers only support these shaders:
 
   - **None**
     draws each computer pixel according to
-    the colour of the single nearest console pixel,
-    sometimes called "nearest neighbour" scaling.
+    the color of the single nearest console pixel,
+    sometimes called "nearest neighbor" scaling.
     This produces unnaturally crisp and blocky images.
       - If you enable Scale, Stretch, or Aspect Correction modes
         in the Output sub-menu of the [Settings menu],
-        neighbouring console pixels may be drawn
+        neighboring console pixels may be drawn
         with a different number of computer pixels due to rounding errors,
         causing a distracting rippling effect.
   - **Blur**
     draws each computer pixel according to
-    the weighted average colour
+    the weighted average color
     of the four nearest console pixels,
     sometimes called "bilinear" scaling.
     This produces unnaturally blurry images.
@@ -36,11 +36,11 @@ the OpenGL driver also supports custom shaders.
 
 **Note:**
 For technical reasons,
-higan's emulation of certain consoles
-can produce surprising behaviour
+ares's emulation of certain consoles
+can produce surprising behavior
 in certain shaders,
 particularly shaders that compare each console pixel
-with its neighbours.
+with its neighbors.
 See [Video Shaders and TV-based consoles][vstv] for details.
 
 [vstv]: #video-shaders-and-tv-based-consoles
@@ -48,13 +48,13 @@ See [Video Shaders and TV-based consoles][vstv] for details.
 Where to get custom shaders
 ---------------------------
 
-  - higan includes some simple example shaders.
-    If your copy of higan did not come with shaders,
-    you can get them from the [unofficial higan repository].
-  - [quark-shaders] contains many high-quality shaders for use with higan.
+  - ares includes some simple example shaders.
+    If your copy of ares did not come with shaders,
+    you can get them from the [unofficial ares repository].
+  - [quark-shaders] contains many high-quality shaders for use with ares.
   - You can write your own.
 
-[unofficial higan repository]: https://gitlab.com/higan/higan/tree/master/shaders
+[unofficial ares repository]: https://gitlab.com/ares/ares/tree/master/shaders
 [quark-shaders]: https://github.com/hizzlekizzle/quark-shaders
 
 How to install custom shaders
@@ -68,24 +68,24 @@ and probably some `*.fs` or `*.vs` files.
 
 Place the shader folder inside
 the `shaders` folder
-of your higan installation.
+of your ares installation.
 If you don't have a `shaders` folder,
 create it beside the `systems` folder
 and `settings.bml`.
 
   - On Windows,
-    this is probably the folder containing `higan.exe`
+    this is probably the folder containing `ares.exe`
   - On Linux,
-    this is probably `~/.local/share/higan`
+    this is probably `~/.local/share/ares`
 
-Launch higan,
+Launch ares,
 open the [Settings menu],
 and choose "Advanced ..." to open
 the [Advanced tab] of the Settings window.
 Under "Driver Selection",
 make sure "Video" is set to "OpenGL".
 If it wasn't already set that way,
-you'll need to restart higan
+you'll need to restart ares
 for the change to take effect.
 
 Open the Settings menu again,
@@ -97,7 +97,7 @@ Load a game
 (so you can see the results),
 switch between shaders
 to see what they do,
-and pick your favourite!
+and pick your favorite!
 
 Notable examples
 ----------------
@@ -106,7 +106,7 @@ The quark-shaders repository mentioned above
 contains lots of carefully-crafted shaders,
 but some are particularly noteworthy:
 
-  - **AANN** implements "anti-aliased nearest neighbour" scaling.
+  - **AANN** implements "anti-aliased nearest neighbor" scaling.
     This uses anti-aliasing to hide
     the rounding errors often introduced by
     aspect ratio correction
@@ -114,23 +114,23 @@ but some are particularly noteworthy:
     producing an image nearly as crisp as the "None" shader,
     but without the distracting ripple effect.
   - **Gameboy** emulates the squarish aspect-ratio,
-    greenish-colours,
+    greenish-colors,
     and limited palette
     of the original Game Boy.
     At larger scales,
     you can even see the fine gaps between each pixel,
-    and the shadow that dark colours would cast
+    and the shadow that dark colors would cast
     on the LCD background.
   - **NTSC** performs NTSC encoding,
     bandwidth limiting,
     and NTSC decoding of the video image to recreate
-    the colour fringing,
+    the color fringing,
     blurring
     and shimmer
     that most game players would have seen
     on real televisions.
-    Some games depend on NTSC artefacts
-    to display colours outside the console's official palette
+    Some games depend on NTSC artifacts
+    to display colors outside the console's official palette
     or to create effects like transparency.
 
 Video Shaders and TV-based consoles
@@ -143,28 +143,28 @@ just blindly scale up the images they're given,
 but sophisticated shaders
 (such as the third-party "xBR" shader)
 try to produce higher-quality output
-by recognising particular patterns,
+by recognizing particular patterns,
 like taking three diagonal pixels
 and turning that into a smooth diagonal line.
 
 These shaders assume that
 each pixel drawn by the game's artists
 becomes a single pixel in the video output they analyze.
-The hand-held consoles that higan emulates
+The hand-held consoles that ares emulates
 (and also the Famicom)
 can only output video at one specific resolution,
 so this "one pixel equals one pixel" rule holds true,
 and pattern-based shaders like "xBR" work just fine.
 Unfortunately,
 this is not true for most of the TV-based consoles
-that higan supports.
+that ares supports.
 
 The Super Famicom's "normal" video mode
 draws 256 pixels across the width of the screen,
 but the "high resolution" mode draws 512.
 Since Super Famicom games can enable hi-res mode at any time
 (even halfway through a frame),
-higan always renders Super Famicom video output 512 pixels wide,
+ares always renders Super Famicom video output 512 pixels wide,
 just in case.
 This means that in "normal" mode,
 each pixel drawn by the game's artists
@@ -184,7 +184,7 @@ This is sometimes referred to as "480i" video.
 Although interlaced mode cannot be enabled mid-frame
 like high-resolution mode,
 resolution switching is still complex,
-so higan always draws all 480 lines of video output.
+so ares always draws all 480 lines of video output.
 This means for a normal, non-interlaced game,
 each pixel drawn by the game's artists
 becomes four pixels in the video output
@@ -196,7 +196,7 @@ for each row of pixels in the video output.
 
 The Mega Drive has similar problems
 to the Super Famicom.
-It has the same behaviour with interlacing,
+It has the same behavior with interlacing,
 but its high-resolution mode switches
 from 256 pixels across to 320 pixels across.
 Therefore in normal mode,
@@ -212,6 +212,6 @@ but its horizontal resolution is much more flexible
 than the Super Famicom or Mega Drive,
 and so it has the same problems with shaders as those consoles.
 
-[Settings menu]: ../interface/higan.md#the-settings-menu
+[Settings menu]: ../interface/ares.md#the-settings-menu
 [video driver]: drivers.md#video
-[Advanced tab]: ../interface/higan-settings.md#advanced
+[Advanced tab]: ../interface/ares-settings.md#advanced

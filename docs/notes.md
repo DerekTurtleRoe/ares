@@ -137,7 +137,7 @@ you'll need to configure the MBC5 "controller"
 connected to the "cartridge" port:
 
   - Open
-    [ares's Input settings](interface/higan-settings.md#input)
+    [ares's Input settings](interface/ares-settings.md#input)
   - In the list of consoles,
     select Game Boy, or Game Boy Color
     depending on which console you want to use to play the game
@@ -166,7 +166,7 @@ to experience the rumble effect in ares
 you'll need to configure the console itself:
 
   - Open
-    [ares's Input settings](interface/higan-settings.md#input)
+    [ares's Input settings](interface/ares-settings.md#input)
   - In the list of consoles,
     select Game Boy Advance
   - In the list of inputs,
@@ -195,7 +195,7 @@ as well as a bonus mode in *Dr Mario + Puzzle League*,
 expect the player to physically rotate the device
 so the screen is tall rather than wide.
 ares supports this feature with
-a Rotate [hotkey](interface/higan-settings.md#hotkeys).
+a Rotate [hotkey](interface/ares-settings.md#hotkeys).
 
 When the user presses the Rotate hotkey,
 the console's video output is rotated 90° anti-clockwise,
@@ -215,7 +215,7 @@ vertically or horizontally.
 that requires the player to repeatedly rotate
 the device as they play.
 ares supports this feature with
-a Rotate [hotkey](interface/higan-settings.md#hotkeys).
+a Rotate [hotkey](interface/ares-settings.md#hotkeys).
 
 When the user presses the Rotate hotkey,
 the console's video output is rotated 90° anti-clockwise,

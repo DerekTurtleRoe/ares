@@ -1,13 +1,13 @@
 The Filesystem Browser
 ----------------------
 
-Sometimes higan will need you
+Sometimes ares will need you
 to choose a file or folder.
 For this, it uses a special Filesystem Browser dialog.
 Although many operating systems provide a native filesystem browser,
 they do not all allow the same customisations.
 Therefore,
-higan provides its own filesystem browser
+ares provides its own filesystem browser
 that works the same way on every platform.
 
 The filesystem browser shows the contents of some particular folder,

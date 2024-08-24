@@ -1,7 +1,7 @@
 icarus is a separate tool
-bundled with higan
+bundled with ares
 that allows you to bulk-import ROM files
-into higan's [game library].
+into ares's [game library].
 
 Bulk importing ROM files
 ------------------------
@@ -12,7 +12,7 @@ with customisations:
 
   - The filesystem browser only lists
     files with extensions typically used for ROM dumps from
-    consoles higan emulates,
+    consoles ares emulates,
     plus `.zip` files since ROM dumps are often compressed.
   - Each matching file has a check-box next to it.
   - You can tick the check-box next to every listed file at once
@@ -56,7 +56,7 @@ The icarus Settings dialog contains the following settings:
     and for all games if this box is unticked,
     icarus guesses the manifest data.
     This option is still relevant when "Create Manifests" is unticked:
-    higan uses icarus to generate a manifest when a game is loaded,
+    ares uses icarus to generate a manifest when a game is loaded,
     not just at import-time.
 
 Command line
@@ -76,7 +76,7 @@ as described under [Bulk importing ROM files](#bulk-importing-rom-files) above.
 
 When run with the `--import` flag,
 `FILE` should be the path to a ROM file
-for one of the consoles higan supports,
+for one of the consoles ares supports,
 or a `.zip` file containing such a ROM file.
 icarus will import it into the [game library]
 just as it would if running interactively,
